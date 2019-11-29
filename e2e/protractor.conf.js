@@ -16,7 +16,7 @@ exports.config = {
     browserName: 'chrome'
   },
   directConnect: true,
-  baseUrl: 'https://online-studying.herokuapp.com',
+  baseUrl: process.env.CI ? `http://${process.env.POD_HOST}:4200` : 'http://localhost:4200/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
