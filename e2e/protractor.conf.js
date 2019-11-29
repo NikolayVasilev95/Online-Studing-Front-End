@@ -16,7 +16,7 @@ exports.config = {
     browserName: 'chrome'
   },
   directConnect: true,
-  baseUrl: 'https://online-studying.herokuapp.com/',
+  baseUrl: 'https://online-studying.herokuapp.com',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
