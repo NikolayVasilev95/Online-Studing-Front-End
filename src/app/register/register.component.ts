@@ -18,9 +18,6 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegisterClick() {
-	let headers = new Headers();
-	headers.append('Access-Control-Allow-Origin', '*');
-	headers.append('Access-Control-Allow-Credentials', 'true');
     this.http.post<any>(
       '/api/register',
       { 
@@ -29,8 +26,7 @@ export class RegisterComponent implements OnInit {
         lastName:  this.model.lastName,
         email: this.model.email,
         password: this.model.password
-      },
-	  { headers: headers }
+      }
     ).subscribe(res => {
       this.successmsg = true
     },
