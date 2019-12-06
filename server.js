@@ -5,15 +5,7 @@ const path = require('path');
 
 const app = express();
 
-var corsOptions = {
-  origin: function(origin, callback){
-        var isWhitelisted = originsWhitelist.indexOf(origin) !== -1;
-        callback(null, isWhitelisted);
-  },
-  credentials:true
-}
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/OnlyneStuding'));
