@@ -18,15 +18,17 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegisterClick() {
+	let headers = new Headers();
+	headers.append('Access-Control-Allow-Origin','*');
     this.http.post<any>(
-      'https://online-studing.herokuapp.com/api/register', 
+      'https://online-studing.herokuapp.com/api/register',
       { 
         name: this.model.username,
         firstName: this.model.firstName,
         lastName:  this.model.lastName,
         email: this.model.email,
         password: this.model.password
-      }
+      },{headers}
     ).subscribe(res => {
       this.successmsg = true
     },
