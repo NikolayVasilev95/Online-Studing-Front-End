@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
 
   onRegisterClick() {
     this.http.post<any>(
-      '/api/register',
+      'https://online-studing.herokuapp.com/api/register',
       { 
         name: this.model.username,
         firstName: this.model.firstName,
