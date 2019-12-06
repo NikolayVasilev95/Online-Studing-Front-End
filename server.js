@@ -1,16 +1,8 @@
 //Install express server
-const cors = require('cors');
 const express = require('express');
 const path = require('path');
 
 const app = express();
-
-// Enable CORS
-app.use(cors());
-// Get our API routes
-const api = require('./api');
-// Set our api routes
-app.use('/api', api);
 
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/OnlyneStuding'));
