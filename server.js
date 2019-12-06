@@ -5,8 +5,14 @@ const path = require('path');
 
 const app = express();
 
-// Serve only the static files form the dist directory
+// Enable CORS
 app.use(cors());
+// Get our API routes
+const api = require('./api');
+// Set our api routes
+app.use('/api', api);
+
+// Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/OnlyneStuding'));
 
 app.get('/*', function(req,res) {
