@@ -1,7 +1,7 @@
 var HttpsProxyAgent = require('https-proxy-agent');
 var proxyConfig = [{
   context: '/api',
-  target: 'https://online-studing.herokuapp.com/',
+  target: 'https://online-studing.herokuapp.com',
   secure: false
 }];
 
