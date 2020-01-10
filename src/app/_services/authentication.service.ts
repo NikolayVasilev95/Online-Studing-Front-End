@@ -33,7 +33,7 @@ export class AuthenticationService {
     logout() {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
-        return this.http.get<any>('https://online-studing.herokuapp.com/api/logout').subscribe(res => {console.log(res)});
+        return this.http.get<any>('api/logout').subscribe(res => {console.log(res)});
     }
 }
 
