@@ -5,7 +5,9 @@ const path = require('path');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://online-studing.herokuapp.com'
+}));
 
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/OnlyneStuding'));
